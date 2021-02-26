@@ -1,0 +1,68 @@
+
+/* #1 Default Styling*/
+
+* {
+    box-sizing: border-box;
+}
+
+/* #2 Page Styling*/
+
+body {
+    margin: 0;
+    font-family: "Space Grotesk";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-align: center;
+    height: 100vh;
+}
+
+/* #2 Main Content Styling*/
+
+.container {
+    width: 500px;
+    height: 500px;
+    background-image: url("../resources/jupe-photo.png");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #d5c4fd;
+    transition: background-size 300ms ease-in-out;
+}
+
+.text-overlay {
+    height: 100%;
+    padding: 10%;
+    cursor: pointer;
+    background-color: #AA85FE;
+    opacity: 0;
+    line-height: 1.8em;
+    transition: opacity 300ms ease-in-out;
+}
+
+.text-overlay:hover {
+    opacity: 1;
+}
+
+.button {
+    text-decoration: none;
+    background-color: #141C3A;
+    color: white;
+    padding: 20px;
+    font-size: 20px; 
+    font-weight: bold;
+    letter-spacing: 0.3em;
+    transition: background-color 300ms ease-in-out;
+}
+
+/* #4 Extras */
+
+.container:hover {
+    background-size: 120%;
+}
+
+.button:hover {
+    background-color: white;
+    color: #141C3A;
+}
