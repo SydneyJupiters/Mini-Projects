@@ -1,0 +1,55 @@
+
+/*General Styles*/
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.shape {
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    cursor: pointer;
+    background-color: #d1d3da;
+    background-image: url("../resources/jupe-photo.png");
+    background-position: center;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    transition: all 300ms ease-in-out;
+    position: relative;
+}
+
+/*Shape Styles*/
+
+.shape:hover {
+    background-size: 110%;
+}
+
+.normal:hover {
+    background-color: #FFCC99;
+}
+.circle:hover {
+    background-color: #B8BAFF;
+    border-radius: 50%;
+}
+
+.diamond:hover {
+    background-color: #BBFEEC;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.semi-circle:hover {
+    background-color: #FFFD94;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+}
