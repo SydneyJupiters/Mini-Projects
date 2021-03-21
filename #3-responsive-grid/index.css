@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lufga";
+}
+
+.container {
+    height: 75%;
+    width: 80%;
+    max-height: 600px;
+    display: grid;
+    grid-template-areas: "one one two three"
+                         "one one four five";
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 15px;
+    position: relative;
+}
+
+.container::before {
+    content: "LAPTOP";
+    position: absolute;
+    top: -90px;
+    width: 100%;
+    font-size: 60px;
+    font-weight: bold;
+    z-index: 5;
+    text-align: center;
+    color: gray;
+}
+
+.box {
+    background-image: url("../resources/jupe-two.png");
+    background-position: left;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+}
+
+.one {
+    grid-area: one;
+    background-color: #e39695;
+    color: #cc444bb4;
+}
+
+.two {
+    grid-area: two;
+    background-color: #faa275;
+    color: #ff6e39;
+}
+
+.three {
+    grid-area: three;
+    background-color: #ffee70;
+    color: #dd6235a9;
+}
+
+.four {
+    grid-area: four;
+    background-color: #bfd200;
+    color: #007f5fa4;
+}
+
+.five {
+    grid-area: five;
+    background-color: #ade8f4;
+    color: #023d8aa4;
+}
+
+
+h2 {
+    position: absolute;
+    margin: 0;
+    bottom: -20px;
+    left: -20px;
+    line-height: 0.8;
+    font-size: 15vw;
+}
+
+.one h2 {
+    font-size: 35vw;
+    bottom: -50px;
+}
+
+/*DESKTOP & 4K*/
+
+@media only screen and (min-width: 1750px) {
+    .container {
+        height: 40%;
+        width: 90%;
+        max-height: 600px;
+        grid-template-areas: "one two three four five";
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .container::before {
+        content: "DESKTOP";
+    }
+
+    .box h2 {
+        font-size: 16vw;
+        bottom: -40px;
+        left: -20px;
+        
+    }
+}
+
+/*LAPTOP SMALL*/
+
+@media only screen and (max-width: 1350px) {
+    .container {
+        height: 55%;
+        width: 95%;
+    }
+
+    .container::before {
+        content: "LAPTOP SMALL";
+    }
+
+    .one h2 {
+        font-size: 45vw;
+    }
+
+    h2 {
+        font-size: 20vw;
+    }
+}
+
+/*TABLET*/
+
+@media only screen and (max-width: 800px) {
+
+    .container {
+        height: 80%;
+        width: 85%;
+        max-height: 1000px;
+        grid-template-areas: "one two "
+                             "three four"
+                             "five empty";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+
+    .container::before {
+        content: "TABLET";
+    }
+
+    .box {
+        min-height: 210px;
+        min-width: 210px;
+    }
+
+    .box h2 {
+        font-size: 30vw;
+        bottom: -20px;
+        left: 0;
+    }
+}
+
+/*MOBILE*/
+
+@media only screen and (max-width: 500px) {
+
+    body {
+        height: 130vh;
+    }
+    .container {
+        height: 85%;
+        width: 95%;
+        grid-template-areas: "one"
+                             "two"
+                             "three"
+                             "four"
+                             "five";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    }
+
+    .container::before {
+        content: "MOBILE";
+    }
+
+    .box {
+        min-height: 280px;
+    }
+
+    .box h2 {
+        font-size: 70vw;
+        bottom: -30px;
+    }
+}
