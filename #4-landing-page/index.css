@@ -1,0 +1,276 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    background-color: #1d263b;
+    font-family: "Glora", sans-serif;
+    display: flex;
+    justify-content: center;
+}
+
+/*LANDING PAGE (1.0)*/
+
+.landing-page {
+    margin-top: 20px;
+    height: 100vh;
+    width: 90%;
+    max-height: 1000px;
+    max-width: 2100px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 10fr;
+    overflow: hidden;
+    position: relative;
+    
+    
+}
+
+
+/*Nav Bar (1.1)*/
+
+.nav-bar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconify[data-icon="cil:tennis"] {
+    color: white;
+    font-size: 70px;
+    transition: color 300ms ease-in-out;
+}
+
+.iconify[data-icon="cil:tennis"]:hover {
+    color: #99d98c;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-link {
+    color: #99d98c;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    font-family: "Lufga", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 20px;
+    position: relative;
+    transition: color 250ms ease-out;
+}
+
+nav a:hover {
+    color: #99d98c;
+}
+
+nav a::after {
+    content: ".";
+    display: block;
+    color: #99d98c;
+    position: absolute;
+    font-size: 35px;
+    left: 45%;
+    bottom: -20px;
+    opacity: 0;
+    transition: opacity 300ms ease-in-out;
+}
+
+nav a:hover::after {
+    content: ".";
+    opacity: 1;
+}
+
+.contact-us {
+    color: #99d98c;
+    display: flex;
+    align-items: center;
+}
+
+.iconify[data-icon="eva:diagonal-arrow-right-up-outline"] {
+    color: #99d98c;
+}
+
+.iconify[data-icon="heroicons-solid:menu-alt-4"] {
+    color: white;
+    font-size: 52px;
+    display: none;
+}
+
+
+/*Hero Section (1.2)*/
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+}
+
+.main-focus {
+    text-align: center;
+    width: 65%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+}
+
+.call-to-action {
+    z-index: 1;
+}
+
+.main-title {
+    color: white;
+    font-size: 140px;
+    margin: 0;
+    line-height: 0.8;
+    letter-spacing: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 44px;
+    background-color: #99d98c;
+    font-family: "Glora", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 5px;
+    width: 180px;
+    height: 60px;
+    transition: background-color 200ms ease-out;
+}
+
+button:hover {
+    background-color: white;
+}
+
+.main-image {
+    width: 100%;
+    height: 800px;
+    background-image: url("../resources/main-banner.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: 1px 11px 16px 1px rgba(0, 0, 0, 0.25);
+}
+
+/*Other (1.3)*/
+
+.iconify[data-icon="bi:mouse"] {
+    color: white;
+    position: absolute;
+    bottom: 75px;
+    transition: color 200ms ease-in;
+}
+
+.iconify[data-icon="bi:mouse"]:hover {
+    color: #99d98c;
+}
+
+.iconify[data-icon="cil:tennis-ball"] {
+    color: black;
+    position: absolute;
+    font-size: 50vw;
+    z-index: -3;
+    top: -25px;
+    right: 0;
+    opacity: 0.5;
+}
+
+
+
+
+/*4K & Desktop*/
+
+@media only screen and (min-width: 1900px) {
+
+    .landing-page {
+        max-height: 1100px;
+    }
+
+    nav a {
+        font-size: 20px;
+    }
+
+    .main-image {
+        height: 900px;
+    }
+
+    .main-title {
+        font-size: 200px;
+    }
+
+    button {
+        width: 200px;
+        font-size: 20px;
+    }
+
+    
+}
+
+/*Tablet*/
+
+@media only screen and (max-width: 1024px) {
+
+    .menu a {
+        display: none;
+    }
+
+    .main-focus {
+        width: 85%;
+    }
+
+    .main-title {
+        font-size: 18vw;
+    }
+
+    .main-image {
+        height: 750px;
+    }
+
+    .iconify[data-icon="heroicons-solid:menu-alt-4"] {
+        display: block;
+    }
+
+    .iconify[data-icon="bi:mouse"] {
+        bottom: 15%;
+        left: 48%;
+    }
+}
+
+/*Mobile*/
+
+@media only screen and (max-width: 510px) {
+
+    .landing-page {
+        max-height: 600px;
+    }
+
+    .iconify[data-icon="cil:tennis"] {
+    font-size: 70px;
+    }
+
+    .iconify[data-icon="heroicons-solid:menu-alt-4"] {
+        font-size: 45px;
+    }
+    
+    .main-focus {
+        width: 100%;
+    }
+    button {
+        width: 150px;
+        height: 50px;
+        font-size: 15px;
+    }
+
+    .iconify[data-icon="bi:mouse"] {
+        bottom: 15%;
+        left: 44%;
+    }
+}
