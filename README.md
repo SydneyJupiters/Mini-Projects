@@ -1,1 +1,1 @@
-# Welcome to my mini projects that I work on duting my spare time
+# Welcome to my mini projects that I work on during my spare time
